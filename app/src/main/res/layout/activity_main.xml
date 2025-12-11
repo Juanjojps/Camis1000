@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/stroke_color"
+    tools:context=".MainActivity">
+
+    <!-- Banner -->
+    <ImageView
+        android:id="@+id/banner_image"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:contentDescription="Banner de ofertas"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botones de Navegación -->
+    <HorizontalScrollView
+        android:id="@+id/scroll_botones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner_image">
+
+        <LinearLayout
+            android:id="@+id/layout_botones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/boton_ofertas"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="6dp"
+                android:text="Ofertas"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#0145B2"
+                app:strokeColor="#0145B2" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/boton_carrito"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="6dp"
+                android:text="Carrito"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#0145B2"
+                app:strokeColor="#0145B2" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/boton_acerca_de"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="6dp"
+                android:text="Acerca de"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#0145B2"
+                app:strokeColor="#0145B2" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Lista de Productos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista_productos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scroll_botones"
+        tools:listitem="@layout/item_product" />
+
+    <!-- FloatingActionButton para lanzar la notificación -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_notificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="Lanzar notificación de oferta"
+        android:src="@android:drawable/ic_dialog_email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
