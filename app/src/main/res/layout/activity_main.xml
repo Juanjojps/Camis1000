@@ -11,14 +11,17 @@
     <!-- Banner -->
     <ImageView
         android:id="@+id/banner_image"
-        android:layout_width="wrap_content"
-        android:layout_height="180dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:contentDescription="Banner de ofertas"
         android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
         android:src="@drawable/banner_image"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.20" />
+
 
     <!-- Botones de Navegación -->
     <HorizontalScrollView
