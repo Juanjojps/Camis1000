@@ -32,7 +32,6 @@ object RepositorioCarrito {
         // Obtenemos la lista actual de productos del LiveData. Si es nula, creamos una nueva lista vacía.
         val listaActual = _productosEnCarrito.value ?: mutableListOf()
 
-        // Buena práctica: Comprobamos si el producto ya existe en el carrito (por su id)
         // para evitar duplicados. La función 'any' devuelve true si algún elemento cumple la condición.
         if (!listaActual.any { it.id == producto.id }) {
             listaActual.add(producto)
