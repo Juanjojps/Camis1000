@@ -149,10 +149,10 @@ class MainActivity : ActividadBase() {
         // Creamos el adaptador, le pasamos la lista de productos y la acción a realizar al pulsar uno.
         adaptadorProducto = AdaptadorProducto(listaProductos) { productoPulsado ->
             // La acción es crear un Intent para abrir la ActividadDetalleProducto.
-            val intent = Intent(this, ActividadDetalleProducto::class.java).apply {
+            val intent = Intent(this, DetalleProducto::class.java).apply {
                 // Metemos el objeto 'productoPulsado' (que es Parcelable) dentro del Intent.
                 // Usamos una clave constante para recuperarlo en la otra Activity.
-                putExtra(ActividadDetalleProducto.EXTRA_PRODUCTO, productoPulsado)
+                putExtra(DetalleProducto.EXTRA_PRODUCTO, productoPulsado)
             }
             // Iniciamos la nueva Activity.
             startActivity(intent)
@@ -170,12 +170,12 @@ class MainActivity : ActividadBase() {
         }
         findViewById<Button>(R.id.boton_carrito).setOnClickListener {
             // Al pulsar "Carrito", creamos un Intent y abrimos la ActividadCarrito.
-            val intent = Intent(this, ActividadCarrito::class.java)
+            val intent = Intent(this, Carrito::class.java)
             startActivity(intent)
         }
         findViewById<Button>(R.id.boton_acerca_de).setOnClickListener {
             // Al pulsar "Acerca de", creamos un Intent y abrimos la ActividadAcercaDe.
-            val intent = Intent(this, ActividadAcercaDe::class.java)
+            val intent = Intent(this, AcercaDe::class.java)
             startActivity(intent)
         }
     }

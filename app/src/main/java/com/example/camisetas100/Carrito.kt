@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
  * Activity que muestra el contenido del carrito de compras.
  * Hereda de ActividadBase para obtener automáticamente el estilo edge-to-edge.
  */
-class ActividadCarrito : ActividadBase() {
+class Carrito : ActividadBase() {
 
     // Referencias a las vistas del layout que necesitaremos manipular.
     private lateinit var listaCarritoRecyclerView: RecyclerView

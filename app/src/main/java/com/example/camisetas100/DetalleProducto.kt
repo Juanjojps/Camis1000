@@ -11,7 +11,7 @@ import com.google.android.material.snackbar.Snackbar
  * Activity que muestra los detalles de un único producto.
  * Hereda de ActividadBase para obtener automáticamente el estilo edge-to-edge.
  */
-class ActividadDetalleProducto : ActividadBase() {
+class DetalleProducto : ActividadBase() {
 
     // Variable para guardar el producto que estamos mostrando. Es nullable (?) porque al principio no tenemos producto.
     private var productoActual: Producto? = null

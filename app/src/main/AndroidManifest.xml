@@ -23,15 +23,15 @@
         </activity>
 
         <activity
-            android:name=".ActividadCarrito"
+            android:name=".Carrito"
             android:label="Carrito de Compras"/>
 
         <activity
-            android:name=".ActividadDetalleProducto"
+            android:name=".DetalleProducto"
             android:label=""/>
 
         <activity
-            android:name=".ActividadAcercaDe"
+            android:name=".AcercaDe"
             android:label="Acerca de" />
 
     </application>

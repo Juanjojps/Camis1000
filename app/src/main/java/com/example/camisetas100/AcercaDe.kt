@@ -2,7 +2,7 @@ package com.example.camisetas100
 
 import android.os.Bundle
 
-class ActividadAcercaDe : ActividadBase() {
+class AcercaDe : ActividadBase() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
